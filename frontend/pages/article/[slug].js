@@ -1,10 +1,10 @@
 import ReactMarkdown from "react-markdown"
 import Moment from "react-moment"
-import { fetchAPI } from "../../lib/api"
-import Layout from "../../components/layout"
-import NextImage from "../../components/image"
-import Seo from "../../components/seo"
-import { getStrapiMedia } from "../../lib/media"
+import { fetchAPI } from "../../shared/lib/api"
+import Layout from "../../shared/components/layout"
+import NextImage from "../../shared/components/image"
+import { Seo } from "../../shared/ui/seo"
+import { getStrapiMedia } from "../../shared/lib/media"
 
 const Article = ({ article, categories }) => {
   const imageUrl = getStrapiMedia(article.attributes.image)

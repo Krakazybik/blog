@@ -1,10 +1,10 @@
 import App from "next/app"
 import Head from "next/head"
-import "../assets/css/style.css"
 import { createContext } from "react"
-import { fetchAPI } from "../lib/api"
-import { getStrapiMedia } from "../lib/media"
-
+import { fetchAPI } from "../shared/lib/api"
+import { getStrapiMedia } from "../shared/lib/media"
+import "shared/assets/css/style.css"
+import "shared/styles/colors.scss"
 // Store Strapi Global object in context
 export const GlobalContext = createContext({})
 

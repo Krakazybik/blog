@@ -1,0 +1,24 @@
+@import "shared/styles/colors";
+
+.Header {
+  display: flex;
+  flex-direction: column;
+}
+
+.Nav {
+  ul {
+    display: flex;
+  flex-direction: row;
+    list-style: none;
+    gap: 0.25rem;
+  li {
+      padding: 1rem 0;
+
+      a {
+        background-color: $color-orange;
+        color: $color-light;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+}

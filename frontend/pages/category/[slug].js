@@ -1,7 +1,7 @@
-import Articles from "../../components/articles"
-import { fetchAPI } from "../../lib/api"
-import Layout from "../../components/layout"
-import Seo from "../../components/seo"
+import Articles from "../../shared/components/articles"
+import { fetchAPI } from "../../shared/lib/api"
+import Layout from "../../shared/components/layout"
+import { Seo } from "../../shared/ui/seo"
 
 const Category = ({ category, categories }) => {
   const seo = {
