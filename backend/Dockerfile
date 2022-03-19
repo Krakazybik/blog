@@ -1,0 +1,9 @@
+FROM node:14-alpine
+ENV NODE_ENV=production
+WORKDIR /app
+RUN npm install yarn
+RUN yarn install
+RUN yarn build
+COPY . .
+EXPOSE 1337
+CMD ["yarn", "start"]
