@@ -1,0 +1,8 @@
+version: '3'
+services:
+  blog-fronent:
+    build: .
+    environment:
+      NEXT_PUBLIC_STRAPI_API_URL: http://3.70.174.98:1337
+    ports:
+      - '3000:3000'
