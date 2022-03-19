@@ -6,9 +6,10 @@ import { fetchAPI } from "../shared/lib/api"
 
 const Home = ({ articles, categories, homepage }) => {
   return (
-    <Layout categories={categories}>
+    /*<Layout categories={categories}>
       <Articles articles={articles} />{" "}
-    </Layout>
+    </Layout>*/
+    <div>Здесь никого нет!</div>
   )
 }
 

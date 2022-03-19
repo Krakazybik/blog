@@ -1,12 +1,12 @@
 import { Header } from "widgets/header"
-import { fetchAPI } from "../../shared/lib/api"
+import cn from "classnames"
+import styles from "./styles.module.scss"
 
-export const Layout = ({ categories, children }) => {
+export const Layout = ({ categories, children, className }) => {
   return (
-    <>
-      <Header categories={categories} />
+    <div className={cn(styles.Layout, className)}>
       <main>{children}</main>
-      <footer>dsda</footer>
-    </>
+      <footer></footer>
+    </div>
   )
 }

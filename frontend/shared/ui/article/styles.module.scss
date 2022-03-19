@@ -1,0 +1,42 @@
+@import "shared/styles/colors";
+@import "shared/styles/global";
+
+.Article {
+  background: $color-dark-alt;
+  position: relative;
+  padding: 1rem;
+  z-index: 1;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  a {
+    @extend .Link;
+  }
+}
+
+.Image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 60%);
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.Content {
+  margin: 8rem 0.25rem 0.25rem;
+  padding: 0.25rem 1.5rem 2rem;
+  z-index: 10;
+  background-color: $color-dark-alt;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.3);
+
+  p {
+    padding: 1rem 0;
+  }
+}

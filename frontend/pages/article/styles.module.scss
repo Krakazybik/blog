@@ -1,0 +1,14 @@
+@import "shared/styles/mixins.scss";
+
+.Article {
+  p {
+    font-size: 20px;
+    line-height: 1.33em;
+  }
+
+  @include _480 {
+    h1 {
+      font-size: 32px;
+    }
+  }
+}

@@ -1,10 +1,12 @@
 import ReactMarkdown from "react-markdown"
 import Moment from "react-moment"
 import { fetchAPI } from "../../shared/lib/api"
-import Layout from "../../shared/components/layout"
 import NextImage from "../../shared/components/image"
 import { Seo } from "../../shared/ui/seo"
 import { getStrapiMedia } from "../../shared/lib/media"
+import { Markdown } from "../../shared/ui/markdown"
+import { Layout } from "../../widgets/layout"
+import styles from "./styles.module.scss"
 
 const Article = ({ article, categories }) => {
   const imageUrl = getStrapiMedia(article.attributes.image)
@@ -15,6 +17,31 @@ const Article = ({ article, categories }) => {
     shareImage: article.attributes.image,
     article: true,
   }
+
+  console.log(article)
+
+  return (
+    <Layout categories={categories.data} className={styles.Article}>
+      <Seo seo={seo} />
+      <header>
+        <h1>{article.attributes.title}</h1>
+        <NextImage image={article.attributes.image} />
+      </header>
+
+      <main>
+        {article.attributes.author.picture && (
+          <NextImage image={article.attributes.author.picture} />
+        )}
+        <p>
+          <Markdown>{article.attributes.content}</Markdown>
+        </p>
+      </main>
+
+      <footer>
+        <address>By: {article.attributes.author.data.attributes.name}</address>
+      </footer>
+    </Layout>
+  )
 
   return (
     <Layout categories={categories.data}>

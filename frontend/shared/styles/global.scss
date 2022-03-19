@@ -1,0 +1,15 @@
+.Link {
+  padding: 0.5rem 1rem;
+  background-color: $color-orange-dark;
+  border: 2px solid $color-orange-dark;
+  color: $color-light;
+  box-shadow: 0.125rem 0.125rem 1rem rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+
+  &:hover, &:focus {
+    transition: 0.2s;
+    text-decoration: underline;
+    border-color: $color-light;
+    background-color: $color-orange;
+  }
+}
